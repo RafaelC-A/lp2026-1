@@ -120,12 +120,23 @@ def q15():
 #    funcionário. Para isso, o programa deverá ler o salário atual
 #    do funcionário e ler o percentual de reajuste. Ao final imprimir
 #    o valor do novo salário.
+def q16():
+    salario=float(input('Digite o sálario atual'))
+    percentual=float(input('Digite o percentual de ajuste.'))
+    novo_salario = salario + (salario*percentual/100)
+    print(f'novo salario:{novo_salario}')
+
 
 #17. Faça um programa que calcule a conversão entre graus centígrados
 #    e Fahrenheit. Para isso, leia o valor em centígrados e calcule
 #    com base na fórmula a seguir. Após calcular o programa deve
 #    imprimir o resultado da conversão.
 #    F = (9 x C + 160) / 5
+def q17():
+    c=float(input('Digitea temperatura em celsius:'))
+    f=(9*c+160)/5
+    print(f'temperatura em fahrenheit:{f}')
+
 
 #18. Faça um programa que calcule a quantidade de litros de combustível
 #    consumidos em uma viagem, sabendo-se que o carro tem autonomia de
@@ -139,6 +150,13 @@ def q15():
 #    • L = Litros de combustível consumidos
 #    Ao final, o programa deverá imprimir a distância percorrida e a
 #    quantidade de litros consumidos na viagem.
+def q18():
+    tempo = float(input('Digite o tempo da viagem(horas):'))
+    velocidade = float(input('Digite a velocidade média(km/h):'))
+    distância = tempo * velocidade
+    litros = distância / 12
+    print('f'Distancia percorrida:{distancia}km' )
+    print('f'litros consumidos:{litros}l')
 
 #19. Faça um programa que calcule o valor de uma prestação em atraso.
 #    Para isso, o programa deve ler o valor da prestação vencida, a
