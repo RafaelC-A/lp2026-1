@@ -37,49 +37,178 @@ def exemploCaso():      # serve apenas para valores conhecidos (poucos) e exatos
 
 #1. Faça um programa que leia dois valores numéricos inteiros e efetue
 #   a adição, caso o resultado seja maior que 10, apresentá-lo.
+def q1():
+    num1 = int(input("Digite o primeiro número: "))
+    num2 = int(input("Digite o segundo número: "))
+
+    adicao = num1 + num2
+  
+    if adicao > 10:
+        
+        print("Resultado da soma é:", adicao)
+
 
 #2. Faça um programa que leia dois valores inteiros e efetue a adição.
 #   Caso o valor somado seja maior que 20, este deverá ser apresentado
 #   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
 #   20, este deverá ser apresentado subtraindo-se 5.
+def q2():
+    num1 = int(input("Digite o primeiro número: "))
+    num2 = int(input("Digite o segundo número: "))
+    adicao = num1 + num2
+    if adicao > 20:
+    
+      resultado = adicao + 8
+    else:
+        resultado = adicao - 5
+
+    print(f'{num1} + {num2} = {resultado}')
+
 
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
+def q3():
+    num = int(input("Digite um número inteiro: "))
+    if num % 3 == 0:
+        print(f'{num} é múltiplo de 3')
+    else:
+        print(f'{num} não é múltiplo de 3')
+
+
 
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
+def q4():
+    num = int(input('Digite um número inteiro: '))
+    if num % 5 == 0:
+       print(f'{num} é divisivel por 5')
+    else:
+       print(f'{num} não é divisivel por 5')
+
 
 #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
+def q5():
+    num = int(input('Digite um numero inteiro: '))
+    
+    if num % 3 == 0 and num % 7 == 0:
+        print(f'{num} é divisível por 3 e por 7')
+    else:
+        print(f'{num} não é divisível por 3 e por 7')
+
 
 #6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
 #   estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário
 #   bruto. Faça um programa que permita entrar com o salário bruto
 #   e o valor da prestação e informar se o empréstimo pode ou não ser concedido.
+def q6():
+    salario = float(input("Digite qual seu salario bruto R$: "))
+    prestacao = float(input("Qual o valor da prestação: "))
+    prestacao_maxima = salario * 0.30
+    if prestacao > prestacao_maxima:
+       print(f'Empréstimo NÃO PODE ser concedido. Prestação máxima: R$ {prestacao_maxima}') 
+    else:
+        print("Empréstimo PODE ser concedido.")
+
 
 #7. Faça um programa que leia um número e indique se o número está compreendido
 #   entre 20 e 50 ou não.
 
+def q7():
+    numero = float(input("Digite um número: "))
+
+    if 20 <= numero <= 50:
+        print(f"O número {numero} está compreendido entre 20 e 50.")
+    else:
+        print(f"O número {numero} NÃO está compreendido entre 20 e 50.")
+
+
 #8. Faça um programa que leia um número e imprima uma das mensagens:
 #   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
+def q8():
+    num = int(input("Digite um número: "))
+
+    if num > 20:
+        print("Maior do que 20")
+    elif num == 20:
+        print("Igual a 20")
+    else:
+        print("Menor do que 20")
 
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
 #   verificar se o ano de nascimento informado é válido.
+from datetime import date
+
+def q9():
+    nascimento = int(input("Digite o ano de nascimento: "))
+    atual = date.today().year 
+    
+    if nascimento > atual:
+        print("Ano de nascimento inválido.")
+    else:
+        idade = atual - nascimento
+        print(f"A pessoa tem {idade} anos.")
+
 
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
+def q10():
+    n1 = int(input("Digite o primeiro número: "))
+    n2 = int(input("Digite o segundo número: "))
+    n3 = int(input("Digite o terceiro número: "))
+
+    lista = [n1, n2, n3]
+    lista.sort()
+
+    print("Ordem crescente:", lista)
 
 #11. Faça um programa que leia 3 números e imprima o maior deles.
+def q11():
+    n1 = int(input("Digite o primeiro número: "))
+    n2 = int(input("Digite o segundo número: "))
+    n3 = int(input("Digite o terceiro número: "))
+
+    maior = max(n1, n2, n3)
+
+    print(f"O maior número é {maior}")
 
 #12. Faça um programa que leia a idade de uma pessoa e informe:
 #• Se é maior de idade
 #• Se é menor de idade
 #• Se é maior de 65 anos
+def q12():
+    idade = int(input("Digite a idade: "))
+
+    if idade > 65:
+        print("Maior de 65 anos")
+    elif idade >= 18:
+        print("Maior de idade")
+    else:
+        print("Menor de idade")
 
 #13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota
 #da prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1,
 #a nota da prova 2, a média das notas e uma das mensagens: "Aprovado",
 #"Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
 #reprovação e as demais em prova final).
+def q13():
+    nome = input("Digite o nome do aluno: ")
+    nota1 = float(input("Digite a nota da prova 1: "))
+    nota2 = float(input("Digite a nota da prova 2: "))
+
+    media = (nota1 + nota2) / 2
+
+    if media >= 7:
+        situacao = "Aprovado"
+    elif media < 3:
+        situacao = "Reprovado"
+    else:
+        situacao = "Em Prova Final"
+
+    print(f"Aluno: {nome}")
+    print(f"Nota 1: {nota1}")
+    print(f"Nota 2: {nota2}")
+    print(f"Média: {media}")
+    print(f"Situação: {situacao}")
 
 #14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
 #desconto do INSS segundo a tabela seguir:
@@ -88,10 +217,32 @@ def exemploCaso():      # serve apenas para valores conhecidos (poucos) e exatos
 #Maior que R$600,00 e menor ou igual a R$1200,00 20%
 #Maior que R$1200,00 e menor ou igual a R$2000,00 25%
 #Maior que R$2000,00 30%
+def q14():
+    salario = float(input("Digite o salário: R$ "))
+
+    if salario <= 600:
+        desconto = 0
+    elif salario <= 1200:
+        desconto = salario * 0.20
+    elif salario <= 2000:
+        desconto = salario * 0.25
+    else:
+        desconto = salario * 0.30
+
+    print(f"Desconto do INSS: R$ {desconto}")
 
 #15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o
 #valor da compra for menor que R$20,00, caso contrário, o lucro será de 30%.
 #Faça um programa que leia o valor do produto e imprima o valor da venda.
+def q15():
+    valor = float(input("Digite o valor do produto: R$ "))
+
+    if valor < 20:
+        venda = valor * 1.45
+    else:
+        venda = valor * 1.30
+
+    print(f"Valor de venda: R$ {venda}")
 
 #16. A confederação brasileira de natação irá promover eliminatórias para o
 #próximo mundial. Faça um programa que receba a idade de um nadador e imprima
@@ -102,6 +253,23 @@ def exemploCaso():      # serve apenas para valores conhecidos (poucos) e exatos
 #Juvenil A 11 - 13 anos
 #Juvenil B 14 - 17 anos
 #Sênior maiores de 18 anos
+def q16():
+    idade = int(input("Digite a idade do nadador: "))
+
+    if 5 <= idade <= 7:
+        categoria = "Infantil A"
+    elif 8 <= idade <= 10:
+        categoria = "Infantil B"
+    elif 11 <= idade <= 13:
+        categoria = "Juvenil A"
+    elif 14 <= idade <= 17:
+        categoria = "Juvenil B"
+    elif idade >= 18:
+        categoria = "Sênior"
+    else:
+        categoria = "Idade inválida"
+
+    print(f"Categoria: {categoria}")
 
 #17. Depois da liberação do governo para as mensalidades dos planos de saúde,
 #as pessoas começaram a fazer pesquisas para descobrir um bom plano, não
@@ -115,6 +283,25 @@ def exemploCaso():      # serve apenas para valores conhecidos (poucos) e exatos
 #Acima de 45 até 59 anos R$150,00
 #Acima de 59 até 65 anos R$250,00
 #Maior que 65 anos R$400,00
+def q17():
+    nome = input("Digite o nome: ")
+    idade = int(input("Digite a idade: "))
+
+    if idade <= 10:
+        valor = 30
+    elif idade <= 29:
+        valor = 60
+    elif idade <= 45:
+        valor = 120
+    elif idade <= 59:
+        valor = 150
+    elif idade <= 65:
+        valor = 250
+    else:
+        valor = 400
+
+    print(f"Nome: {nome}")
+    print(f"Valor do plano: R$ {valor}")
 
 #18. Faça um programa que leia um número inteiro entre 1 e 12 e escreva o mês
 #correspondente. Caso o usuário digite um número fora desse intervalo, deverá
