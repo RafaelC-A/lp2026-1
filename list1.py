@@ -171,7 +171,7 @@ def q17():
 #    12 km por litro de combustível. O programa deverá ler o tempo
 #    decorrido na viagem e a velocidade média e aplicar as fórmulas:
 #    D = T x V       L = D / 12
-#    Em que:
+#    Em que::
 #    • D = Distância percorrida
 #    • T = Tempo
 #    • V = Velocidade média
