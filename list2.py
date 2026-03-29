@@ -306,6 +306,17 @@ def q17():
 #18. Faça um programa que leia um número inteiro entre 1 e 12 e escreva o mês
 #correspondente. Caso o usuário digite um número fora desse intervalo, deverá
 #aparecer uma mensagem informando que não existe mês com este número.
+def q18():
+
+     num = int(input("Digite um número de 1 a 12: "))
+
+     meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+         "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+
+     if 1 <= num <= 12:
+     print("Mês:", meses[num - 1])
+     else:
+     print("Não existe mês com esse número.")
 
 #19. Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores
 #para cada estado. Sabendo-se que os arqueiros de uma equipe não obtiveram o
@@ -315,6 +326,23 @@ def q17():
 #• Mostrar esses em ordem decrescente;
 #• Se a soma dos pontos for maior do que 100, imprimir a média aritmética entre eles,
 #  caso contrário, imprimir a mensagem "Equipe desclassificada".
+def q19():
+   p1 = int(input("Pontos do jogador 1: "))
+ p2 = int(input("Pontos do jogador 2: "))
+ p3 = int(input("Pontos do jogador 3: "))
+
+ pontos = [p1, p2, p3]
+ pontos.sort(reverse=True)
+
+ print("Ordem decrescente:", pontos)
+
+ soma = sum(pontos)
+
+ if soma > 100:
+    media = soma / 3
+    print("Média:", media)
+ else:
+    print("Equipe desclassificada")
 
 #20. O banco XXX concederá um crédito especial com juros de 2% aos seus clientes de
 #acordo com o saldo médio no último ano. Faça um programa que leia o saldo médio
@@ -326,7 +354,20 @@ def q17():
 #de 501 a 1000 30% do valor do saldo médio
 #de 1001 a 3000 40% do valor do saldo médio
 #acima de 3001 50% do valor do saldo médio
+def q20():
+ saldo = float(input("Digite o saldo médio: "))
 
+ if saldo <= 500:
+    credito = 0
+ elif saldo <= 1000:
+    credito = saldo * 0.30
+ elif saldo <= 3000:
+    credito = saldo * 0.40
+ else:
+    credito = saldo * 0.50
+
+ print("Saldo médio:", saldo)
+ print("Valor do crédito:", credito)
 #21. A biblioteca de uma Universidade deseja fazer um programa que leia o nome do
 #livro que será emprestado, o tipo de usuário (professor ou aluno) e possa
 #imprimir um recibo conforme mostrado a seguir. Considerar que o professor
